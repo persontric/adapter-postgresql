@@ -1,0 +1,71 @@
+{
+	"name": "@persontric/adapter-postgresql",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "PostgreSQL adapter for Persontric",
+	"keywords": [
+		"persontric",
+		"auth",
+		"pg",
+		"postgresql",
+		"authentication",
+		"adapter",
+		"sql",
+		"kysely",
+		"drizzle"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/persontric/adapter-postgresql"
+	},
+	"author": "Brian Takita",
+	"license": "Apache-2.0",
+	"types": "index.ts",
+	"exports": {
+		".": "./index.ts",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"*.md",
+		"*.js",
+		"*.json",
+		"*.ts",
+		"driver"
+	],
+	"scripts": {
+		"build": "shx rm -rf ./dist/* && tsc",
+		"test.neon-http": "tsx test.neon-http/neon-http.ts",
+		"test.node-postgres": "tsx test.node-postgres/node-postgres.ts",
+		"test.postgresjs": "tsx test.postgresjs/postgresjs.ts",
+		"auri.build": "pnpm build"
+	},
+	"dependencies": {
+		"pg": "^8.11.3",
+		"postgres": "^3.4.3"
+	},
+	"devDependencies": {
+		"@persontric/adapter-test": "workspace:*",
+		"@neondatabase/serverless": "^0.8.1",
+		"@types/pg": "^8.11.0",
+		"dotenv": "^16.4.5",
+		"persontric": "workspace:*",
+		"tsx": "^4.7.1"
+	},
+	"peerDependencies": {
+		"persontric": "^0.0.0",
+		"pg": "^8.11.3",
+		"postgres": "^3.4.3",
+		"@neondatabase/serverless": "0.8.1"
+	},
+	"peerDependenciesMeta": {
+		"pg": {
+			"optional": true
+		},
+		"postgres": {
+			"optional": true
+		},
+		"@neondatabase/serverless": {
+			"optional": true
+		}
+	}
+}

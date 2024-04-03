@@ -40,7 +40,7 @@
 		"auri.build": "pnpm build"
 	},
 	"dependencies": {
-		"pg": "^8.11.4",
+		"pg": "^8.11.5",
 		"postgres": "^3.4.4"
 	},
 	"devDependencies": {
@@ -53,7 +53,7 @@
 	},
 	"peerDependencies": {
 		"persontric": "^0.0.0",
-		"pg": "^8.11.4",
+		"pg": "^8.11.5",
 		"postgres": "^3.4.4",
 		"@neondatabase/serverless": "0.9.0"
 	},
